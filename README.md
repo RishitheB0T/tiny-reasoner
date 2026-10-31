@@ -262,11 +262,11 @@ A 2-layer × 128-wide model trained with the same SFT code (`make draft`, about 
 ### The pipeline
 
 ```mermaid
-flowchart LR
-    data["data.py<br/>synthetic problems<br/>with worked solutions"] --> tok["tokenizer.py<br/>BPE, one token per digit"]
+flowchart TB
+    data["data.py<br/>synthetic problems with worked solutions"] --> tok["tokenizer.py<br/>BPE, one token per digit"]
     tok --> model["model.py<br/>Llama-style transformer"]
     model --> sft["train_sft.py<br/>Stage 1: SFT"]
-    sft -- "checkpoint at step 1,500" --> grpo["grpo.py<br/>Stage 2: GRPO<br/>8 tries per question"]
+    sft -- "checkpoint at step 1,500" --> grpo["grpo.py<br/>Stage 2: GRPO, 8 tries per question"]
     rewards["rewards.py<br/>code checks the answer"] --> grpo
     sft -- "1,500 more SFT steps" --> final["final SFT model<br/>(the one that is served)"]
     grpo --> compare["evaluate.py + passk.py<br/>RL vs more SFT"]
@@ -297,16 +297,19 @@ vocabulary   =  256 bytes + 8 merges + <|endoftext|>  =  265 tokens
 
 ```mermaid
 flowchart LR
-    ids["token ids"] --> emb["embedding<br/>265 × 256"]
-    emb --> blocks
+    emb["token ids<br/>↓<br/>embedding<br/>265 × 256"] --> blocks
     subgraph blocks["transformer block × 6"]
-        direction LR
-        inp(("in")) --> n1["RMSNorm"] --> attn["attention (GQA)<br/>8 query heads · 2 KV heads<br/>RoPE · causal mask · KV cache"] --> add1(("+"))
+        direction TB
+        inp(("x")) --> n1["RMSNorm"]
+        n1 --> attn["attention (GQA)<br/>8 query heads · 2 KV heads<br/>RoPE · causal mask · KV cache"]
+        attn --> add1(("+"))
         inp --> add1
-        add1 --> n2["RMSNorm"] --> mlp["SwiGLU MLP<br/>256 → 704 → 256"] --> add2(("+"))
+        add1 --> n2["RMSNorm"]
+        n2 --> mlp["SwiGLU MLP<br/>256 → 704 → 256"]
+        mlp --> add2(("+"))
         add1 --> add2
     end
-    blocks --> nf["RMSNorm"] --> head["LM head<br/>(tied to the embedding)"] --> probs["next-token<br/>probabilities"]
+    blocks --> head["RMSNorm<br/>↓<br/>LM head<br/>(tied to the embedding)<br/>↓<br/>next-token probabilities"]
 ```
 
 <table>
@@ -355,10 +358,10 @@ targets = -100    the loss is computed on these tokens only
 
 ```mermaid
 flowchart LR
-    q["16 questions<br/>(levels 4–5)"] --> s["the model answers<br/>each one 8 times<br/>(temperature 1.0)"]
-    s --> r["code grades every answer<br/>+1.0 correct · +0.1 format"]
-    r --> a["advantage =<br/>(reward − group mean) ÷ group std"]
-    a --> u["clipped update (ε = 0.2)<br/>+ KL penalty (β = 0.04)<br/>to the frozen SFT model"]
+    q["16 questions<br/>(levels 4–5)"] --> s["8 answers each<br/>(temperature 1.0)"]
+    s --> r["code grades them<br/>+1.0 correct<br/>+0.1 format"]
+    r --> a["advantage<br/>(reward − mean) ÷ std<br/>within each group"]
+    a --> u["clipped update<br/>ε = 0.2, KL β = 0.04<br/>vs frozen SFT model"]
     u -- "repeat for 300 steps" --> q
 ```
 
@@ -372,17 +375,17 @@ flowchart LR
 
 Right answers become more likely and wrong ones less likely. If all 8 answers score the same, every advantage is 0 and the group teaches nothing, so RL needs problems the model solves *sometimes*.
 
-$$
-A_i = \frac{r_i - \operatorname{mean}(r_1, \dots, r_8)}{\operatorname{std}(r_1, \dots, r_8)}
-$$
+```math
+A_i = \frac{r_i - \mathrm{mean}(r_1, \dots, r_8)}{\mathrm{std}(r_1, \dots, r_8)}
+```
 
-$$
-\mathcal{L} = -\frac{1}{|o|} \sum_t \Big[ \min\big( \rho_t A,\ \operatorname{clip}(\rho_t,\ 1-\varepsilon,\ 1+\varepsilon)\, A \big) - \beta\, \mathrm{KL}_t \Big]
-$$
+```math
+\mathcal{L} = -\frac{1}{|o|} \sum_t \Big[ \min\big( \rho_t A,\ \mathrm{clip}(\rho_t,\ 1-\varepsilon,\ 1+\varepsilon)\, A \big) - \beta\, \mathrm{KL}_t \Big]
+```
 
-$$
+```math
 \rho_t = \frac{\pi_\theta(o_t)}{\pi_{\text{old}}(o_t)}, \qquad \mathrm{KL}_t = e^{d_t} - d_t - 1, \qquad d_t = \log \pi_{\text{ref}}(o_t) - \log \pi_\theta(o_t)
-$$
+```
 
 <sub>The loss is averaged over each answer's tokens, then over answers. The KL term uses the "k3" estimator, which is always ≥ 0 and is 0 only when the two models agree.</sub>
 
@@ -403,9 +406,9 @@ flowchart LR
     plus --> y["y"]
 ```
 
-$$
+```math
 W' = W + \frac{\alpha}{r}\, B A, \qquad r = 8,\ \ \alpha = 16
-$$
+```
 
 LoRA is applied to every linear layer in all 6 blocks. Because `B` starts at zero, training begins exactly at the original model, and after training `B·A` is merged into `W`, so inference costs nothing extra. Division uses two characters the model had never seen (`/` and `r`), whose embedding rows were still random. So exactly those 2 rows are trained as well, through a gradient mask (the same idea as PEFT's `modules_to_save`).
 
@@ -427,9 +430,9 @@ sequenceDiagram
 
 **int8 quantization:** each weight row gets one scale, and weights are stored as 8-bit integers (de-quantized on the fly).
 
-$$
-s_{\text{row}} = \frac{\max |w_{\text{row}}|}{127}, \qquad w_{\text{int8}} = \operatorname{round}\left(\frac{w}{s_{\text{row}}}\right)
-$$
+```math
+s_{\text{row}} = \frac{\max |w_{\text{row}}|}{127}, \qquad w_{\text{int8}} = \mathrm{round}\left(\frac{w}{s_{\text{row}}}\right)
+```
 
 ---
 
