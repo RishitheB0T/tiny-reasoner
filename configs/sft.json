@@ -1,0 +1,15 @@
+{
+  "out_dir": "runs/sft",
+  "n_layer": 6,
+  "n_head": 8,
+  "n_kv_head": 2,
+  "n_embd": 256,
+  "block_size": 256,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "learning_rate": 0.001,
+  "warmup_iters": 100,
+  "eval_interval": 250,
+  "eval_problems": 300,
+  "snapshot_steps": "1500"
+}

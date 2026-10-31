@@ -1,0 +1,135 @@
+tokenized 200000 train / 2000 val examples in 13.1s, longest=178 tokens
+model: 4.30M parameters, config=GPTConfig(block_size=256, vocab_size=265, n_layer=6, n_head=8, n_kv_head=2, n_embd=256, ffn_hidden=704, rope_theta=10000.0, norm_eps=1e-05, dropout=0.0)
+step=0 val_loss=5.678 val_acc=0 val_acc_L1=0 val_acc_L2=0 val_acc_L3=0 val_acc_L4=0 val_acc_L5=0 time_s=20.8
+step=0 loss=5.676 lr=1e-05 grad_norm=15.64 ms_per_step=23504 tokens_seen=9536 time_s=23.5
+step=25 loss=3.143 lr=0.00026 grad_norm=2.691 ms_per_step=1196 tokens_seen=251072 time_s=53.4
+step=50 loss=1.94 lr=0.00051 grad_norm=2.307 ms_per_step=1092 tokens_seen=482816 time_s=80.7
+step=75 loss=1.307 lr=0.00076 grad_norm=4.149 ms_per_step=1122 tokens_seen=724864 time_s=108.7
+step=100 loss=1.114 lr=0.001 grad_norm=3.049 ms_per_step=1256 tokens_seen=966016 time_s=140.1
+step=125 loss=0.9349 lr=0.0009998 grad_norm=6.974 ms_per_step=1382 tokens_seen=1205312 time_s=174.7
+step=150 loss=0.5354 lr=0.0009993 grad_norm=3.194 ms_per_step=1149 tokens_seen=1449024 time_s=203.4
+step=175 loss=0.3463 lr=0.0009985 grad_norm=2.588 ms_per_step=1051 tokens_seen=1677504 time_s=229.7
+step=200 loss=0.3051 lr=0.0009974 grad_norm=2.762 ms_per_step=1147 tokens_seen=1920896 time_s=258.4
+step=225 loss=0.2009 lr=0.0009959 grad_norm=1.522 ms_per_step=1122 tokens_seen=2163648 time_s=286.4
+step=250 val_loss=0.204 val_acc=0.01 val_acc_L1=0.1111 val_acc_L2=0.0303 val_acc_L3=0 val_acc_L4=0 val_acc_L5=0 time_s=321.2
+step=250 loss=0.2106 lr=0.0009941 grad_norm=3.718 ms_per_step=1445 tokens_seen=2400448 time_s=322.5
+step=275 loss=0.1262 lr=0.0009919 grad_norm=1.729 ms_per_step=1581 tokens_seen=2633472 time_s=362.1
+step=300 loss=0.0944 lr=0.0009895 grad_norm=1.583 ms_per_step=1144 tokens_seen=2872640 time_s=390.7
+step=325 loss=0.0921 lr=0.0009867 grad_norm=1.296 ms_per_step=1119 tokens_seen=3109120 time_s=418.6
+step=350 loss=0.0633 lr=0.0009836 grad_norm=1.318 ms_per_step=1152 tokens_seen=3348352 time_s=447.5
+step=375 loss=0.0538 lr=0.0009802 grad_norm=0.885 ms_per_step=1121 tokens_seen=3585728 time_s=475.5
+step=400 loss=0.0611 lr=0.0009764 grad_norm=1.084 ms_per_step=1151 tokens_seen=3822208 time_s=504.3
+step=425 loss=0.0528 lr=0.0009724 grad_norm=1.585 ms_per_step=1175 tokens_seen=4057728 time_s=533.6
+step=450 loss=0.0438 lr=0.000968 grad_norm=1.145 ms_per_step=1154 tokens_seen=4292480 time_s=562.5
+step=475 loss=0.0564 lr=0.0009634 grad_norm=1.43 ms_per_step=1078 tokens_seen=4527744 time_s=589.4
+step=500 val_loss=0.0457 val_acc=0.5733 val_acc_L1=0.8889 val_acc_L2=0.8485 val_acc_L3=0.4811 val_acc_L4=0.5192 val_acc_L5=0.2 time_s=623.3
+step=500 loss=0.045 lr=0.0009584 grad_norm=1.611 ms_per_step=1399 tokens_seen=4753856 time_s=624.4
+step=525 loss=0.0375 lr=0.0009531 grad_norm=0.965 ms_per_step=1064 tokens_seen=4984320 time_s=651
+step=550 loss=0.0344 lr=0.0009476 grad_norm=0.83 ms_per_step=1059 tokens_seen=5216960 time_s=677.5
+step=575 loss=0.0432 lr=0.0009417 grad_norm=1.009 ms_per_step=2420 tokens_seen=5457536 time_s=738
+step=600 loss=0.0319 lr=0.0009356 grad_norm=0.989 ms_per_step=1816 tokens_seen=5694656 time_s=783.4
+step=625 loss=0.0329 lr=0.0009292 grad_norm=0.918 ms_per_step=1161 tokens_seen=5932032 time_s=812.4
+step=650 loss=0.0279 lr=0.0009225 grad_norm=0.704 ms_per_step=1168 tokens_seen=6170688 time_s=841.6
+step=675 loss=0.0334 lr=0.0009155 grad_norm=0.671 ms_per_step=1121 tokens_seen=6411328 time_s=869.6
+step=700 loss=0.0203 lr=0.0009082 grad_norm=0.427 ms_per_step=1121 tokens_seen=6652160 time_s=897.7
+step=725 loss=0.0156 lr=0.0009007 grad_norm=0.683 ms_per_step=1145 tokens_seen=6886784 time_s=926.3
+step=750 val_loss=0.0137 val_acc=0.8167 val_acc_L1=0.8889 val_acc_L2=0.9242 val_acc_L3=0.8113 val_acc_L4=0.8365 val_acc_L5=0.2 time_s=968.3
+step=750 loss=0.0101 lr=0.000893 grad_norm=0.349 ms_per_step=1728 tokens_seen=7131200 time_s=969.5
+step=775 loss=0.0213 lr=0.000885 grad_norm=1.281 ms_per_step=1073 tokens_seen=7360448 time_s=996.3
+step=800 loss=0.0143 lr=0.0008767 grad_norm=0.387 ms_per_step=1153 tokens_seen=7603584 time_s=1025
+step=825 loss=0.0227 lr=0.0008682 grad_norm=0.675 ms_per_step=1127 tokens_seen=7846016 time_s=1053
+step=850 loss=0.0137 lr=0.0008595 grad_norm=0.55 ms_per_step=1095 tokens_seen=8079616 time_s=1081
+step=875 loss=0.0171 lr=0.0008505 grad_norm=0.822 ms_per_step=1023 tokens_seen=8308096 time_s=1106
+step=900 loss=0.0126 lr=0.0008413 grad_norm=0.438 ms_per_step=1141 tokens_seen=8551360 time_s=1135
+step=925 loss=0.0067 lr=0.0008319 grad_norm=0.223 ms_per_step=1035 tokens_seen=8782400 time_s=1161
+step=950 loss=0.0081 lr=0.0008223 grad_norm=0.272 ms_per_step=1052 tokens_seen=9017536 time_s=1187
+step=975 loss=0.0124 lr=0.0008125 grad_norm=0.437 ms_per_step=1104 tokens_seen=9254464 time_s=1214
+step=1000 val_loss=0.014 val_acc=0.7967 val_acc_L1=0.8889 val_acc_L2=0.9545 val_acc_L3=0.8019 val_acc_L4=0.7788 val_acc_L5=0.1333 time_s=1250
+step=1000 loss=0.0128 lr=0.0008025 grad_norm=0.474 ms_per_step=1480 tokens_seen=9489984 time_s=1252
+step=1025 loss=0.0051 lr=0.0007924 grad_norm=0.16 ms_per_step=1361 tokens_seen=9720832 time_s=1286
+step=1050 loss=0.0137 lr=0.000782 grad_norm=0.496 ms_per_step=1102 tokens_seen=9960640 time_s=1313
+step=1075 loss=0.0058 lr=0.0007715 grad_norm=0.243 ms_per_step=1090 tokens_seen=10201024 time_s=1340
+step=1100 loss=0.0056 lr=0.0007608 grad_norm=0.397 ms_per_step=1093 tokens_seen=10439552 time_s=1368
+step=1125 loss=0.0081 lr=0.0007499 grad_norm=0.367 ms_per_step=1142 tokens_seen=10669312 time_s=1396
+step=1150 loss=0.0163 lr=0.000739 grad_norm=0.426 ms_per_step=1124 tokens_seen=10905344 time_s=1424
+step=1175 loss=0.0035 lr=0.0007278 grad_norm=0.203 ms_per_step=1138 tokens_seen=11147008 time_s=1453
+step=1200 loss=0.005 lr=0.0007166 grad_norm=0.233 ms_per_step=1182 tokens_seen=11389824 time_s=1482
+step=1225 loss=0.0066 lr=0.0007052 grad_norm=0.253 ms_per_step=1175 tokens_seen=11622016 time_s=1512
+step=1250 val_loss=0.0072 val_acc=0.8933 val_acc_L1=1 val_acc_L2=0.9545 val_acc_L3=0.9245 val_acc_L4=0.8558 val_acc_L5=0.6 time_s=1550
+step=1250 loss=0.0087 lr=0.0006937 grad_norm=0.377 ms_per_step=1571 tokens_seen=11859968 time_s=1551
+step=1275 loss=0.0084 lr=0.0006821 grad_norm=0.573 ms_per_step=1129 tokens_seen=12103360 time_s=1579
+step=1300 loss=0.004 lr=0.0006704 grad_norm=0.171 ms_per_step=1150 tokens_seen=12342592 time_s=1608
+step=1325 loss=0.0042 lr=0.0006586 grad_norm=0.264 ms_per_step=1094 tokens_seen=12581632 time_s=1635
+step=1350 loss=0.0033 lr=0.0006467 grad_norm=0.268 ms_per_step=1081 tokens_seen=12824960 time_s=1662
+step=1375 loss=0.0082 lr=0.0006348 grad_norm=0.334 ms_per_step=1073 tokens_seen=13063040 time_s=1689
+step=1400 loss=0.0045 lr=0.0006228 grad_norm=0.232 ms_per_step=1068 tokens_seen=13293632 time_s=1716
+step=1425 loss=0.0153 lr=0.0006108 grad_norm=0.495 ms_per_step=1174 tokens_seen=13534656 time_s=1745
+step=1450 loss=0.0076 lr=0.0005987 grad_norm=0.338 ms_per_step=1116 tokens_seen=13769344 time_s=1773
+step=1475 loss=0.0055 lr=0.0005865 grad_norm=0.158 ms_per_step=984 tokens_seen=13998656 time_s=1798
+step=1500 val_loss=0.003 val_acc=0.9567 val_acc_L1=1 val_acc_L2=0.9848 val_acc_L3=0.9811 val_acc_L4=0.9327 val_acc_L5=0.8 time_s=1834
+step=1500 loss=0.003 lr=0.0005744 grad_norm=0.336 ms_per_step=1482 tokens_seen=14239232 time_s=1835
+step=1525 loss=0.0014 lr=0.0005622 grad_norm=0.061 ms_per_step=1021 tokens_seen=14468416 time_s=1860
+step=1550 loss=0.0018 lr=0.00055 grad_norm=0.129 ms_per_step=1081 tokens_seen=14703616 time_s=1887
+step=1575 loss=0.004 lr=0.0005378 grad_norm=0.178 ms_per_step=1080 tokens_seen=14938048 time_s=1914
+step=1600 loss=0.0045 lr=0.0005256 grad_norm=0.105 ms_per_step=1284 tokens_seen=15170752 time_s=1946
+step=1625 loss=0.0017 lr=0.0005135 grad_norm=0.095 ms_per_step=2083 tokens_seen=15411840 time_s=1998
+step=1650 loss=0.0087 lr=0.0005013 grad_norm=0.225 ms_per_step=2000 tokens_seen=15653760 time_s=2048
+step=1675 loss=0.0035 lr=0.0004892 grad_norm=0.141 ms_per_step=1056 tokens_seen=15891776 time_s=2075
+step=1700 loss=0.0023 lr=0.0004772 grad_norm=0.221 ms_per_step=1058 tokens_seen=16125504 time_s=2101
+step=1725 loss=0.0021 lr=0.0004652 grad_norm=0.131 ms_per_step=1114 tokens_seen=16366720 time_s=2129
+step=1750 val_loss=0.0028 val_acc=0.95 val_acc_L1=1 val_acc_L2=0.9848 val_acc_L3=0.9528 val_acc_L4=0.9519 val_acc_L5=0.7333 time_s=2166
+step=1750 loss=0.0014 lr=0.0004533 grad_norm=0.07 ms_per_step=1514 tokens_seen=16602624 time_s=2167
+step=1775 loss=0.0025 lr=0.0004414 grad_norm=0.185 ms_per_step=1094 tokens_seen=16846592 time_s=2194
+step=1800 loss=0.0026 lr=0.0004296 grad_norm=0.186 ms_per_step=1024 tokens_seen=17079808 time_s=2220
+step=1825 loss=0.0026 lr=0.0004179 grad_norm=0.184 ms_per_step=1120 tokens_seen=17319296 time_s=2248
+step=1850 loss=0.0007 lr=0.0004063 grad_norm=0.057 ms_per_step=1107 tokens_seen=17561920 time_s=2276
+step=1875 loss=0.0011 lr=0.0003948 grad_norm=0.008 ms_per_step=1119 tokens_seen=17801664 time_s=2304
+step=1900 loss=0.0013 lr=0.0003834 grad_norm=0.159 ms_per_step=1032 tokens_seen=18032384 time_s=2330
+step=1925 loss=0.0023 lr=0.0003722 grad_norm=0.111 ms_per_step=1034 tokens_seen=18267648 time_s=2355
+step=1950 loss=0.0036 lr=0.000361 grad_norm=0.19 ms_per_step=997 tokens_seen=18497728 time_s=2380
+step=1975 loss=0.0037 lr=0.0003501 grad_norm=0.113 ms_per_step=1012 tokens_seen=18729088 time_s=2406
+step=2000 val_loss=0.0028 val_acc=0.9567 val_acc_L1=1 val_acc_L2=1 val_acc_L3=0.9528 val_acc_L4=0.9423 val_acc_L5=0.8667 time_s=2441
+step=2000 loss=0.0003 lr=0.0003392 grad_norm=0.015 ms_per_step=1462 tokens_seen=18964608 time_s=2442
+step=2025 loss=0.003 lr=0.0003285 grad_norm=0.229 ms_per_step=1083 tokens_seen=19204224 time_s=2469
+step=2050 loss=0.0004 lr=0.000318 grad_norm=0.06 ms_per_step=1031 tokens_seen=19435904 time_s=2495
+step=2075 loss=0.0047 lr=0.0003076 grad_norm=0.191 ms_per_step=1020 tokens_seen=19671872 time_s=2520
+step=2100 loss=0.0001 lr=0.0002975 grad_norm=0.014 ms_per_step=1090 tokens_seen=19910784 time_s=2548
+step=2125 loss=0.0024 lr=0.0002875 grad_norm=0.067 ms_per_step=1017 tokens_seen=20142912 time_s=2573
+step=2150 loss=0.0009 lr=0.0002777 grad_norm=0.141 ms_per_step=1086 tokens_seen=20383360 time_s=2600
+step=2175 loss=0.0012 lr=0.0002681 grad_norm=0.066 ms_per_step=1078 tokens_seen=20618496 time_s=2627
+step=2200 loss=0.0019 lr=0.0002587 grad_norm=0.241 ms_per_step=1081 tokens_seen=20857600 time_s=2654
+step=2225 loss=0.0002 lr=0.0002495 grad_norm=0.023 ms_per_step=1013 tokens_seen=21084864 time_s=2680
+step=2250 val_loss=0.0019 val_acc=0.9633 val_acc_L1=1 val_acc_L2=0.9848 val_acc_L3=0.9717 val_acc_L4=0.9519 val_acc_L5=0.8667 time_s=2715
+step=2250 loss=0.0004 lr=0.0002405 grad_norm=0.109 ms_per_step=1442 tokens_seen=21325376 time_s=2716
+step=2275 loss=0.0001 lr=0.0002318 grad_norm=0.007 ms_per_step=1068 tokens_seen=21570688 time_s=2742
+step=2300 loss=0.0011 lr=0.0002233 grad_norm=0.056 ms_per_step=1044 tokens_seen=21808384 time_s=2768
+step=2325 loss=0.0013 lr=0.000215 grad_norm=0.253 ms_per_step=1066 tokens_seen=22046848 time_s=2795
+step=2350 loss=0.0001 lr=0.000207 grad_norm=0.023 ms_per_step=1060 tokens_seen=22286784 time_s=2822
+step=2375 loss=0 lr=0.0001993 grad_norm=0.003 ms_per_step=984 tokens_seen=22513984 time_s=2846
+step=2400 loss=0.0004 lr=0.0001918 grad_norm=0.126 ms_per_step=1034 tokens_seen=22748288 time_s=2872
+step=2425 loss=0.0006 lr=0.0001845 grad_norm=0.018 ms_per_step=1018 tokens_seen=22978368 time_s=2897
+step=2450 loss=0 lr=0.0001775 grad_norm=0 ms_per_step=1058 tokens_seen=23215296 time_s=2924
+step=2475 loss=0.0001 lr=0.0001708 grad_norm=0.008 ms_per_step=1045 tokens_seen=23451136 time_s=2950
+step=2500 val_loss=0.0012 val_acc=0.9733 val_acc_L1=1 val_acc_L2=1 val_acc_L3=0.9906 val_acc_L4=0.9519 val_acc_L5=0.8667 time_s=2986
+step=2500 loss=0.0002 lr=0.0001644 grad_norm=0.05 ms_per_step=1470 tokens_seen=23698752 time_s=2987
+step=2525 loss=0 lr=0.0001583 grad_norm=0.004 ms_per_step=1004 tokens_seen=23925312 time_s=3012
+step=2550 loss=0.0014 lr=0.0001524 grad_norm=0.01 ms_per_step=1029 tokens_seen=24163072 time_s=3038
+step=2575 loss=0.0006 lr=0.0001469 grad_norm=0.104 ms_per_step=1051 tokens_seen=24399488 time_s=3064
+step=2600 loss=0 lr=0.0001416 grad_norm=0.001 ms_per_step=1016 tokens_seen=24631936 time_s=3089
+step=2625 loss=0 lr=0.0001366 grad_norm=0 ms_per_step=1117 tokens_seen=24869760 time_s=3117
+step=2650 loss=0.0001 lr=0.000132 grad_norm=0.035 ms_per_step=1062 tokens_seen=25107904 time_s=3144
+step=2675 loss=0.0008 lr=0.0001276 grad_norm=0.125 ms_per_step=1077 tokens_seen=25342912 time_s=3171
+step=2700 loss=0 lr=0.0001236 grad_norm=0.004 ms_per_step=1085 tokens_seen=25585920 time_s=3198
+step=2725 loss=0 lr=0.0001198 grad_norm=0.004 ms_per_step=1105 tokens_seen=25829824 time_s=3226
+step=2750 val_loss=0.0008 val_acc=0.9767 val_acc_L1=1 val_acc_L2=1 val_acc_L3=0.9906 val_acc_L4=0.9519 val_acc_L5=0.9333 time_s=3261
+step=2750 loss=0.0013 lr=0.0001164 grad_norm=0.21 ms_per_step=1476 tokens_seen=26069248 time_s=3262
+step=2775 loss=0.0001 lr=0.0001133 grad_norm=0.025 ms_per_step=1076 tokens_seen=26299904 time_s=3289
+step=2800 loss=0 lr=0.0001105 grad_norm=0.001 ms_per_step=1086 tokens_seen=26538112 time_s=3316
+step=2825 loss=0 lr=0.0001081 grad_norm=0.002 ms_per_step=1109 tokens_seen=26777472 time_s=3344
+step=2850 loss=0.002 lr=0.0001059 grad_norm=0.036 ms_per_step=1061 tokens_seen=27011776 time_s=3371
+step=2875 loss=0.0005 lr=0.0001041 grad_norm=0.041 ms_per_step=1061 tokens_seen=27248192 time_s=3397
+step=2900 loss=0 lr=0.0001026 grad_norm=0 ms_per_step=1023 tokens_seen=27479552 time_s=3423
+step=2925 loss=0.0002 lr=0.0001015 grad_norm=0.023 ms_per_step=1030 tokens_seen=27717888 time_s=3448
+step=2950 loss=0.0005 lr=0.0001007 grad_norm=0.026 ms_per_step=1036 tokens_seen=27945728 time_s=3474
+step=2975 loss=0 lr=0.0001002 grad_norm=0.015 ms_per_step=1122 tokens_seen=28183424 time_s=3502
+step=3000 val_loss=0.0007 val_acc=0.98 val_acc_L1=1 val_acc_L2=1 val_acc_L3=0.9906 val_acc_L4=0.9519 val_acc_L5=1 time_s=3539
