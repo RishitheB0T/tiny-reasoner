@@ -1,0 +1,13 @@
+# CPU is enough for everything in this project.
+# For a smaller CPU-only PyTorch install use:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+numpy
+regex
+matplotlib
+fastapi
+uvicorn[standard]
+pydantic>=2
+# tests
+pytest
+httpx

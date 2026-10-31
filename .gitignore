@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.install.log
+# generated data (re-create with `make data`)
+data/*.jsonl
+# model checkpoints (re-create with `make train`)
+runs/**/*.pt
+*.zip

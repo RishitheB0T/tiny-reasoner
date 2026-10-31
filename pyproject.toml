@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinyreasoner"
+version = "0.1.0"
+description = "A tiny language model built from scratch and taught to reason with GRPO"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "numpy", "regex", "matplotlib", "fastapi", "uvicorn", "pydantic>=2"]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
