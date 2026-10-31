@@ -1,0 +1,62 @@
+new token ids: [47, 114] ['/', 'r']
+method=lora step=0 div_acc=0 old_tasks_acc=0.995 time_s=22.1
+method=lora step=0 loss=8.171 time_s=23.2
+method=lora step=50 loss=0.4447 time_s=70.7
+method=lora step=100 div_acc=0.0533 old_tasks_acc=0.845 time_s=132.8
+method=lora step=100 loss=0.1715 time_s=133.6
+method=lora step=150 loss=0.0666 time_s=175.9
+method=lora step=200 div_acc=0.4267 old_tasks_acc=0.935 time_s=233.6
+method=lora step=200 loss=0.0381 time_s=234.2
+method=lora step=250 loss=0.0173 time_s=278.6
+method=lora step=300 div_acc=0.7533 old_tasks_acc=0.9783 time_s=337.4
+method=lora step=300 loss=0.0073 time_s=338.3
+method=lora step=350 loss=0.0046 time_s=383.6
+method=lora step=400 div_acc=0.9733 old_tasks_acc=0.985 time_s=445.7
+method=lora step=400 loss=0.0024 time_s=446.5
+method=lora step=450 loss=0.0019 time_s=496
+method=lora step=500 div_acc=0.99 old_tasks_acc=0.9917 time_s=556.8
+method=lora step=500 loss=0.0003 time_s=557.6
+method=lora step=550 loss=0.0003 time_s=602.6
+method=lora step=600 div_acc=0.9967 old_tasks_acc=0.9917 time_s=659.8
+method=full step=0 div_acc=0 old_tasks_acc=0.995 time_s=700
+method=full step=0 loss=8.171 time_s=700.8
+method=full step=50 loss=0.3724 time_s=742.4
+method=full step=100 div_acc=0.1367 old_tasks_acc=0.9233 time_s=796
+method=full step=100 loss=0.088 time_s=796.8
+method=full step=150 loss=0.044 time_s=839.1
+method=full step=200 div_acc=0.79 old_tasks_acc=0.9717 time_s=893.7
+method=full step=200 loss=0.0095 time_s=894.4
+method=full step=250 loss=0.0024 time_s=937.9
+method=full step=300 div_acc=0.95 old_tasks_acc=0.9883 time_s=992.9
+method=full step=300 loss=0.0049 time_s=993.8
+method=full step=350 loss=0.0031 time_s=1038
+method=full step=400 div_acc=0.9733 old_tasks_acc=0.98 time_s=1094
+method=full step=400 loss=0.0012 time_s=1095
+method=full step=450 loss=0.0007 time_s=1138
+method=full step=500 div_acc=1 old_tasks_acc=0.9933 time_s=1196
+method=full step=500 loss=0.0001 time_s=1196
+method=full step=550 loss=0.0002 time_s=1240
+method=full step=600 div_acc=0.9967 old_tasks_acc=0.995 time_s=1297
+{
+  "lora": {
+    "trainable_params": 218624,
+    "div_acc": 0.9967,
+    "old_tasks_acc": 0.9917,
+    "merged": {
+      "div_acc": 0.9967,
+      "old_tasks_acc": 0.9917
+    },
+    "adapter_file_kb": 879.8
+  },
+  "full": {
+    "trainable_params": 4298240,
+    "div_acc": 0.9967,
+    "old_tasks_acc": 0.995,
+    "checkpoint_file_kb": 16810.9
+  },
+  "before": {
+    "div_acc": 0.0,
+    "old_tasks_acc": 0.995
+  },
+  "replay_frac": 0.2
+}

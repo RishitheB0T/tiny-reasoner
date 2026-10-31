@@ -1,0 +1,11 @@
+{
+  "out_dir": "runs/lora",
+  "init_from": "runs/sft/ckpt.pt",
+  "rank": 8,
+  "alpha": 16,
+  "iters": 600,
+  "batch_size": 64,
+  "lora_lr": 0.002,
+  "full_lr": 0.0003,
+  "eval_interval": 100
+}

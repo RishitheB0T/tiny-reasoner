@@ -1,0 +1,61 @@
+new token ids: [47, 114] ['/', 'r']
+method=lora step=0 div_acc=0 old_tasks_acc=0.995 time_s=18.7
+method=lora step=0 loss=10.28 time_s=19.3
+method=lora step=50 loss=0.5706 time_s=48.2
+method=lora step=100 div_acc=0.04 old_tasks_acc=0.0017 time_s=93.6
+method=lora step=100 loss=0.187 time_s=94.2
+method=lora step=150 loss=0.0833 time_s=123.3
+method=lora step=200 div_acc=0.5 old_tasks_acc=0 time_s=164.6
+method=lora step=200 loss=0.0395 time_s=165.2
+method=lora step=250 loss=0.0157 time_s=193.2
+method=lora step=300 div_acc=0.88 old_tasks_acc=0 time_s=234.1
+method=lora step=300 loss=0.0032 time_s=234.7
+method=lora step=350 loss=0.0032 time_s=262.2
+method=lora step=400 div_acc=0.99 old_tasks_acc=0 time_s=304.4
+method=lora step=400 loss=0.001 time_s=304.9
+method=lora step=450 loss=0.0009 time_s=333.1
+method=lora step=500 div_acc=0.9967 old_tasks_acc=0 time_s=372.6
+method=lora step=500 loss=0.0002 time_s=373.2
+method=lora step=550 loss=0.0001 time_s=402
+method=lora step=600 div_acc=0.9967 old_tasks_acc=0 time_s=442.3
+method=full step=0 div_acc=0 old_tasks_acc=0.995 time_s=479.9
+method=full step=0 loss=10.28 time_s=480.5
+method=full step=50 loss=0.4754 time_s=514.4
+method=full step=100 div_acc=0.2067 old_tasks_acc=0.015 time_s=563.8
+method=full step=100 loss=0.0935 time_s=564.6
+method=full step=150 loss=0.0269 time_s=595.5
+method=full step=200 div_acc=0.93 old_tasks_acc=0.015 time_s=638.8
+method=full step=200 loss=0.0081 time_s=639.3
+method=full step=250 loss=0.0028 time_s=668.5
+method=full step=300 div_acc=0.9133 old_tasks_acc=0.01 time_s=706.1
+method=full step=300 loss=0.005 time_s=706.7
+method=full step=350 loss=0.0008 time_s=735.5
+method=full step=400 div_acc=0.9933 old_tasks_acc=0.005 time_s=775
+method=full step=400 loss=0.0002 time_s=775.6
+method=full step=450 loss=0.0001 time_s=803.9
+method=full step=500 div_acc=1 old_tasks_acc=0.0017 time_s=843.3
+method=full step=500 loss=0.0001 time_s=843.8
+method=full step=550 loss=0 time_s=872.5
+method=full step=600 div_acc=1 old_tasks_acc=0 time_s=910.9
+{
+  "lora": {
+    "trainable_params": 218624,
+    "div_acc": 0.9967,
+    "old_tasks_acc": 0.0,
+    "merged": {
+      "div_acc": 0.9967,
+      "old_tasks_acc": 0.0
+    },
+    "adapter_file_kb": 879.8
+  },
+  "full": {
+    "trainable_params": 4298240,
+    "div_acc": 1.0,
+    "old_tasks_acc": 0.0,
+    "checkpoint_file_kb": 16810.9
+  },
+  "before": {
+    "div_acc": 0.0,
+    "old_tasks_acc": 0.995
+  }
+}

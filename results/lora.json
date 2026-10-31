@@ -1,0 +1,22 @@
+{
+  "lora": {
+    "trainable_params": 218624,
+    "div_acc": 0.9967,
+    "old_tasks_acc": 0.0,
+    "merged": {
+      "div_acc": 0.9967,
+      "old_tasks_acc": 0.0
+    },
+    "adapter_file_kb": 879.8
+  },
+  "full": {
+    "trainable_params": 4298240,
+    "div_acc": 1.0,
+    "old_tasks_acc": 0.0,
+    "checkpoint_file_kb": 16810.9
+  },
+  "before": {
+    "div_acc": 0.0,
+    "old_tasks_acc": 0.995
+  }
+}

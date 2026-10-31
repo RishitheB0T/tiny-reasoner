@@ -1,0 +1,22 @@
+{
+  "out_dir": "runs/lora_replay",
+  "init_from": "runs/sft/ckpt.pt",
+  "data_dir": "data",
+  "tokenizer": "data/tokenizer.json",
+  "rank": 8,
+  "alpha": 16,
+  "iters": 600,
+  "batch_size": 64,
+  "lora_lr": 0.002,
+  "full_lr": 0.0003,
+  "warmup_iters": 30,
+  "min_lr_ratio": 0.1,
+  "eval_interval": 100,
+  "n_eval": 300,
+  "n_forget": 200,
+  "replay_frac": 0.2,
+  "results_name": "lora_replay",
+  "bf16": false,
+  "seed": 1337,
+  "threads": 4
+}

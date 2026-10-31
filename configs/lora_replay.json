@@ -1,0 +1,13 @@
+{
+  "out_dir": "runs/lora_replay",
+  "init_from": "runs/sft/ckpt.pt",
+  "rank": 8,
+  "alpha": 16,
+  "iters": 600,
+  "batch_size": 64,
+  "lora_lr": 2e-3,
+  "full_lr": 3e-4,
+  "eval_interval": 100,
+  "replay_frac": 0.2,
+  "results_name": "lora_replay"
+}
