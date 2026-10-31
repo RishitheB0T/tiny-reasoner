@@ -1,0 +1,14 @@
+{
+  "out_dir": "runs/draft",
+  "n_layer": 2,
+  "n_head": 4,
+  "n_kv_head": 2,
+  "n_embd": 128,
+  "block_size": 256,
+  "batch_size": 64,
+  "max_iters": 1500,
+  "learning_rate": 0.002,
+  "warmup_iters": 100,
+  "eval_interval": 500,
+  "eval_problems": 300
+}

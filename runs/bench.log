@@ -1,0 +1,64 @@
+== KV cache
+{'batch1_cache_tok_per_s': 378.5, 'batch1_no_cache_tok_per_s': 125.8, 'batch1_speedup': 3.01, 'batch32_cache_tok_per_s': 4278.6, 'batch32_no_cache_tok_per_s': 263.0, 'batch32_speedup': 16.27}
+== quantization
+{
+ "fp32": {
+  "size_mb": 17.213,
+  "accuracy": 0.8317,
+  "by_level": {
+   "1": 1.0,
+   "2": 1.0,
+   "3": 0.99,
+   "4": 1.0,
+   "5": 1.0,
+   "6": 0.0
+  },
+  "batch1_tok_per_s": 381.1
+ },
+ "bf16": {
+  "size_mb": 8.617,
+  "accuracy": 0.8317,
+  "by_level": {
+   "1": 1.0,
+   "2": 1.0,
+   "3": 0.99,
+   "4": 1.0,
+   "5": 1.0,
+   "6": 0.0
+  },
+  "batch1_tok_per_s": 274.2
+ },
+ "int8": {
+  "size_mb": 4.6,
+  "accuracy": 0.8317,
+  "by_level": {
+   "1": 1.0,
+   "2": 1.0,
+   "3": 0.99,
+   "4": 1.0,
+   "5": 1.0,
+   "6": 0.0
+  },
+  "batch1_tok_per_s": 253.5,
+  "mean_weight_rel_error": 0.00717
+ },
+ "int8_pytorch_kernels": {
+  "size_mb": 4.631,
+  "accuracy": 0.83,
+  "by_level": {
+   "1": 1.0,
+   "2": 1.0,
+   "3": 0.99,
+   "4": 1.0,
+   "5": 0.99,
+   "6": 0.0
+  },
+  "batch1_tok_per_s": 292.7
+ }
+}
+== speculative decoding k=2
+{'k': 2, 'n_prompts': 60, 'identical_outputs': '60/60', 'mean_acceptance_rate': 0.982, 'tokens_per_target_call': 2.93, 'plain_greedy_s': 11.33, 'speculative_s': 8.16, 'draft_alone_s': 3.87, 'speedup': 1.39, 'target_params_M': 4.3, 'draft_params_M': 0.4}
+== speculative decoding k=4
+{'k': 4, 'n_prompts': 60, 'identical_outputs': '60/60', 'mean_acceptance_rate': 0.968, 'tokens_per_target_call': 4.75, 'plain_greedy_s': 11.16, 'speculative_s': 7.24, 'draft_alone_s': 4.21, 'speedup': 1.54, 'target_params_M': 4.3, 'draft_params_M': 0.4}
+== speculative decoding k=6
+{'k': 6, 'n_prompts': 60, 'identical_outputs': '60/60', 'mean_acceptance_rate': 0.941, 'tokens_per_target_call': 6.43, 'plain_greedy_s': 12.24, 'speculative_s': 6.56, 'draft_alone_s': 3.7, 'speedup': 1.87, 'target_params_M': 4.3, 'draft_params_M': 0.4}
