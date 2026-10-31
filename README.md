@@ -357,11 +357,11 @@ targets = -100    the loss is computed on these tokens only
 ### 4 · Stage 2: GRPO, reinforcement learning with verifiable rewards
 
 ```mermaid
-flowchart LR
-    q["16 questions<br/>(levels 4–5)"] --> s["8 answers each<br/>(temperature 1.0)"]
-    s --> r["code grades them<br/>+1.0 correct<br/>+0.1 format"]
-    r --> a["advantage<br/>(reward − mean) ÷ std<br/>within each group"]
-    a --> u["clipped update<br/>ε = 0.2, KL β = 0.04<br/>vs frozen SFT model"]
+flowchart TB
+    q["16 questions<br/>(levels 4–5)"] --> s["the model answers each one 8 times<br/>(temperature 1.0)"]
+    s --> r["code grades every answer<br/>+1.0 correct · +0.1 format"]
+    r --> a["advantage = (reward − group mean) ÷ group std"]
+    a --> u["clipped update (ε = 0.2)<br/>+ KL penalty (β = 0.04) to the frozen SFT model"]
     u -- "repeat for 300 steps" --> q
 ```
 
