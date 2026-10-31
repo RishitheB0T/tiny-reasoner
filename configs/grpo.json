@@ -1,0 +1,16 @@
+{
+  "out_dir": "runs/grpo",
+  "init_from": "runs/sft/ckpt_step1500.pt",
+  "iters": 300,
+  "prompts_per_step": 16,
+  "group_size": 8,
+  "temperature": 1.0,
+  "learning_rate": 3e-05,
+  "clip_eps": 0.2,
+  "kl_beta": 0.04,
+  "ppo_epochs": 2,
+  "minibatch_size": 64,
+  "eval_interval": 25,
+  "rl_levels": "4,5",
+  "threads": 3
+}
