@@ -1,0 +1,9 @@
+.venv
+.git
+data/*.jsonl
+runs/grpo
+runs/sft/ckpt_step*.pt
+runs/lora
+runs/draft
+results
+**/__pycache__
