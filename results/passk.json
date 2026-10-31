@@ -1,0 +1,53 @@
+{
+  "sft_step1500 (RL start)": {
+    "L4": {
+      "pass@1_greedy": 0.93,
+      "pass@8": 0.98,
+      "mean_sample_acc": 0.8988
+    },
+    "L5": {
+      "pass@1_greedy": 0.52,
+      "pass@8": 0.67,
+      "mean_sample_acc": 0.3738
+    },
+    "L6": {
+      "pass@1_greedy": 0.0,
+      "pass@8": 0.0,
+      "mean_sample_acc": 0.0
+    }
+  },
+  "sft_step3000 (+1500 SFT steps)": {
+    "L4": {
+      "pass@1_greedy": 1.0,
+      "pass@8": 1.0,
+      "mean_sample_acc": 1.0
+    },
+    "L5": {
+      "pass@1_greedy": 1.0,
+      "pass@8": 1.0,
+      "mean_sample_acc": 0.9688
+    },
+    "L6": {
+      "pass@1_greedy": 0.0,
+      "pass@8": 0.0,
+      "mean_sample_acc": 0.0
+    }
+  },
+  "sft_step1500 + grpo": {
+    "L4": {
+      "pass@1_greedy": 0.99,
+      "pass@8": 0.99,
+      "mean_sample_acc": 0.99
+    },
+    "L5": {
+      "pass@1_greedy": 0.97,
+      "pass@8": 0.99,
+      "mean_sample_acc": 0.9337
+    },
+    "L6": {
+      "pass@1_greedy": 0.0,
+      "pass@8": 0.0,
+      "mean_sample_acc": 0.0
+    }
+  }
+}
